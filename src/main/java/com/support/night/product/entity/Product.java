@@ -1,4 +1,4 @@
-package com.support.night.user.entity;
+package com.support.night.product.entity;
 
 import com.sun.javafx.beans.IDProperty;
 import lombok.AllArgsConstructor;

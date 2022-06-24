@@ -1,8 +1,8 @@
-package com.support.night.user.service.impl;
+package com.support.night.product.service.impl;
 
-import com.support.night.user.entity.Product;
-import com.support.night.user.repository.ProductRepository;
-import com.support.night.user.service.ProductService;
+import com.support.night.product.service.ProductService;
+import com.support.night.product.entity.Product;
+import com.support.night.product.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

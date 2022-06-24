@@ -1,7 +1,7 @@
-package com.support.night.user.controller;
+package com.support.night.product.controller;
 
-import com.support.night.user.entity.Product;
-import com.support.night.user.service.ProductService;
+import com.support.night.product.entity.Product;
+import com.support.night.product.service.ProductService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

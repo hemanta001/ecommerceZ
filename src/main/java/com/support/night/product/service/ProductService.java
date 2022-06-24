@@ -1,6 +1,6 @@
-package com.support.night.user.service;
+package com.support.night.product.service;
 
-import com.support.night.user.entity.Product;
+import com.support.night.product.entity.Product;
 
 import java.util.List;
 
