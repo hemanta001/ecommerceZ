@@ -27,4 +27,16 @@ public class UserController {
         List<User> userList=userService.findAll();
         return userList;
     }
+
+    @GetMapping(value = "findByFirstName",produces = "application/json")
+    public List<User> findAllByFirstName(@RequestParam(value = "firstName") String firstName){
+        List<User> userList=userService.findAllByFirstName(firstName);
+        return userList;
+    }
+
+    @GetMapping(value = "findByFirstNameAndLastName",produces = "application/json")
+    public List<User> findByFirstNameAndLastName(@RequestParam(value = "firstName") String firstName,@RequestParam(value = "lastName") String lastName){
+        List<User> userList=userService.findAllByFirstNameAndLastName(firstName,lastName);
+        return userList;
+    }
 }

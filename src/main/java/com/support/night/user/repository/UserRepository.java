@@ -3,5 +3,12 @@ package com.support.night.user.repository;
 import com.support.night.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface UserRepository extends JpaRepository<User,Long> {
+
+    List<User> findAllByFirstName(String firstName);
+
+    List<User> findAllByFirstNameAndLastName(String firstName,String lastName);
+
 }
