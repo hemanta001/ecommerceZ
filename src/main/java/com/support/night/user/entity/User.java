@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashMap;
+import java.util.Map;
 
 @Entity
 @Data
@@ -24,5 +26,4 @@ public class User {
     private String username;
 
     private String nickName;
-
 }

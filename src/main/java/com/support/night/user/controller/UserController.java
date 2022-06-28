@@ -6,6 +6,7 @@ import com.support.night.user.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("users")
@@ -20,6 +21,24 @@ public class UserController {
     public User save(@RequestBody User user){
       User user1=userService.save(user);
       return user1;
+    }
+
+    @PutMapping(value = "{userId}",consumes = "application/json",produces = "application/json")
+    public User update(@RequestBody User user,@PathVariable Long userId){
+        User user1=userService.update(userId,user);
+        return user1;
+    }
+
+    @GetMapping(value = "{userId}",produces = "application/json")
+    public Map<String,Object> getById(@PathVariable Long userId){
+        Map<String,Object> response=userService.getById(userId);
+        return response;
+    }
+
+    @DeleteMapping(value = "{userId}",produces = "application/json")
+    public Map<String,String> delete(@PathVariable Long userId){
+        Map<String,String> statusMessage=userService.delete(userId);
+        return statusMessage;
     }
 
     @GetMapping(produces = "application/json")
