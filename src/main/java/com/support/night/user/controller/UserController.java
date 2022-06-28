@@ -19,8 +19,7 @@ public class UserController {
 
     @PostMapping(consumes = "application/json",produces = "application/json")
     public User save(@RequestBody User user){
-      User user1=userService.save(user);
-      return user1;
+      return userService.save(user);
     }
 
     @PutMapping(value = "{userId}",consumes = "application/json",produces = "application/json")
