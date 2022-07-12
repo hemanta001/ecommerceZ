@@ -37,7 +37,8 @@ public class UserServiceImpl implements UserService {
         Optional<User> optionalUser=this.userRepository.findById(id);
         Map<String,String> messageMap=new HashMap<>();
         if(optionalUser.isPresent()){
-            this.userRepository.delete(optionalUser.get());
+            User user=optionalUser.get();
+            this.userRepository.delete(user);
             messageMap.put("message","successfully deleted");
         }
         else{

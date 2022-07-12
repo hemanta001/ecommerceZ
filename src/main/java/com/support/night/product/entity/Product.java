@@ -1,5 +1,6 @@
 package com.support.night.product.entity;
 
+import com.support.night.user.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,5 +22,8 @@ public class Product {
     private String productCategory;
 
     private String productDescription;
+
+    @OneToOne()
+    private User user;
 
 }
